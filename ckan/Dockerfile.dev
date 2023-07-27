@@ -23,9 +23,9 @@ RUN if ! [ /usr/share/zoneinfo/${TZ} -ef /etc/localtime ]; then \
 # For instance:
 #
 ### XLoader ###
-#RUN pip3 install -e 'git+https://github.com/ckan/ckanext-xloader.git@master#egg=ckanext-xloader' && \ 
-#    pip3 install -r ${APP_DIR}/src/ckanext-xloader/requirements.txt && \
-#    pip3 install -U requests[security]
+RUN pip3 install -e 'git+https://github.com/ckan/ckanext-xloader.git@master#egg=ckanext-xloader' && \
+    pip3 install -r ${APP_DIR}/src/ckanext-xloader/requirements.txt && \
+    pip3 install -U requests[security]
 
 ### Harvester ###
 #RUN pip3 install -e 'git+https://github.com/ckan/ckanext-harvest.git@master#egg=ckanext-harvest' && \
